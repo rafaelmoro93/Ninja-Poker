@@ -44,9 +44,9 @@
 
         .highlight-red { color: var(--primary-red); }
 
-        /* --- SECTION 1: HERO --- */
+        /* --- HERO SECTION (COMPACTA E RESPONSIVA) --- */
         .hero {
-            padding: 60px 0 80px;
+            padding: 40px 0 60px;
             background: radial-gradient(circle at center, #250808 0%, #050505 70%);
             display: flex;
             justify-content: center;
@@ -61,9 +61,9 @@
 
         .logo-ninja {
             width: 100%;
-            max-width: 280px;
+            max-width: 180px;
             height: auto;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .badge-oficial {
@@ -71,11 +71,11 @@
             align-items: center;
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid var(--border-color);
-            padding: 8px 18px;
+            padding: 6px 16px;
             border-radius: 100px;
             font-size: 13px;
             color: var(--text-gray);
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .badge-oficial::before {
@@ -89,26 +89,26 @@
         }
 
         h1 {
-            font-size: clamp(32px, 8vw, 72px); /* Ajusta fonte conforme a tela */
+            font-size: clamp(32px, 7vw, 64px);
             font-weight: 800;
             line-height: 1.1;
             letter-spacing: -1px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             max-width: 900px;
         }
 
         .subtext-hero {
-            font-size: clamp(15px, 4vw, 18px);
+            font-size: clamp(15px, 4vw, 17px);
             color: var(--text-gray);
-            max-width: 680px;
-            margin-bottom: 40px;
+            max-width: 600px;
+            margin-bottom: 30px;
         }
 
         .btn-primary {
             background: var(--primary-red);
             color: white;
             text-decoration: none;
-            padding: 18px 35px;
+            padding: 16px 32px;
             border-radius: 12px;
             font-weight: 700;
             display: inline-flex;
@@ -118,7 +118,7 @@
             font-size: 16px;
         }
 
-        /* --- SECTION 2: VANTAGENS --- */
+        /* --- VANTAGENS --- */
         .section-padding { padding: 60px 0; text-align: center; }
 
         .tag-pill {
@@ -172,7 +172,7 @@
         .card h3 { font-size: 18px; font-weight: 700; }
         .card p { color: var(--text-gray); font-size: 14px; line-height: 1.5; }
 
-        /* --- SECTION 3: COMPROMISSO --- */
+        /* --- COMPROMISSO --- */
         .commitment-flex {
             display: flex;
             align-items: center;
@@ -233,7 +233,7 @@
             box-shadow: 0 10px 30px rgba(255, 61, 61, 0.4);
         }
 
-        /* --- SECTION 4: TESTEMUNHOS --- */
+        /* --- TESTEMUNHOS --- */
         .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -250,7 +250,7 @@
         }
 
         .quote { font-size: 40px; color: #222; margin-bottom: -10px; display: block; }
-        .t-text { color: #e5e7eb; font-size: 14px; margin-bottom: 20px; height: 80px; overflow: hidden;}
+        .t-text { color: #e5e7eb; font-size: 14px; margin-bottom: 20px; }
         .t-tag { color: var(--primary-red); font-size: 11px; font-weight: 700; margin-bottom: 20px; display: block; }
         
         .user-meta {
@@ -276,8 +276,9 @@
         .stars { color: var(--yellow); font-size: 10px; margin-left: auto; letter-spacing: 1px; }
 
         /* --- FINAL CTA --- */
-        .final-cta { padding: 80px 0; text-align: center; }
+        .final-cta { padding: 60px 0; text-align: center; }
         .fire-icon { font-size: 40px; margin-bottom: 20px; display: block; }
+        .cta-desc { color: var(--text-gray); margin: 15px auto 25px; max-width: 600px; font-size: 15px; }
 
         footer {
             border-top: 1px solid #111;
@@ -309,40 +310,13 @@
             z-index: 1000;
         }
 
-        /* --- AJUSTES PARA CELULAR (IMPORTANTE) --- */
+        /* --- MEDIA QUERIES PARA RESPONSIVIDADE --- */
         @media (max-width: 900px) {
-            .feature-grid, .testimonial-grid { 
-                grid-template-columns: 1fr; /* Muda para uma coluna só */
-            }
-
-            .commitment-flex { 
-                flex-direction: column; /* Joga os stats pra baixo da descrição */
-                text-align: center;
-            }
-
-            .content-side, .stats-side {
-                width: 100%;
-                flex: none;
-            }
-
-            .pill-grid {
-                grid-template-columns: 1fr; /* Pílulas uma embaixo da outra */
-            }
-
-            .stat-row { font-size: 14px; }
-            
-            .verified-float {
-                left: 50%;
-                transform: translateX(-50%); /* Centraliza o selo no celular */
-                bottom: -20px;
-            }
-
-            .t-text { height: auto; } /* Deixa o texto do depoimento crescer no celular */
-
-            footer {
-                flex-direction: column;
-                gap: 10px;
-            }
+            .feature-grid, .testimonial-grid { grid-template-columns: 1fr; }
+            .commitment-flex { flex-direction: column; text-align: center; }
+            .content-side, .stats-side { width: 100%; flex: none; }
+            .pill-grid { grid-template-columns: 1fr; }
+            .verified-float { left: 50%; transform: translateX(-50%); bottom: -20px; }
         }
     </style>
 </head>
@@ -356,8 +330,7 @@
             <h1>Jogue no Suprema Poker <br> <span class="highlight-red">com quem entende do jogo.</span></h1>
             <p class="subtext-hero">Entre para a agência do <strong>Agente Ninja</strong> e tenha vantagens exclusivas que aumentam seus lucros.</p>
             <a href="https://api.whatsapp.com/send?phone=5545999370097" target="_blank" class="btn-primary">
-                Quero jogar na agência do Ninja
- <span>&rsaquo;</span>
+                Quero jogar na agência do Ninja <span>&rsaquo;</span>
             </a>
         </div>
     </section>
@@ -367,8 +340,6 @@
         <div class="container">
             <span class="tag-pill">Vantagens Exclusivas</span>
             <h2>Por que jogar na agência do <span class="highlight-red">Ninja?</span></h2>
-            <p style="color: var(--text-gray); font-size: 14px;">Benefícios pensados para maximizar seus ganhos e sua experiência no poker</p>
-
             <div class="feature-grid">
                 <div class="card">
                     <div class="card-header">
@@ -413,22 +384,10 @@
 
         <div class="stats-side">
             <div class="stats-card">
-                <div class="stat-row">
-                    <span style="color: #777">Jogadores Ativos</span>
-                    <span class="stat-val">500+</span>
-                </div>
-                <div class="stat-row">
-                    <span style="color: #777">Rakeback Distribuído</span>
-                    <span class="stat-val" style="color: var(--green)">R$ 400K+</span>
-                </div>
-                <div class="stat-row">
-                    <span style="color: #777">Taxa de Satisfação</span>
-                    <span class="stat-val" style="color: var(--yellow)">98%</span>
-                </div>
-                <div class="stat-row">
-                    <span style="color: #777">Tempo de Saque</span>
-                    <span class="stat-val" style="color: var(--blue)">&lt; 5min</span>
-                </div>
+                <div class="stat-row"><span style="color: #777">Jogadores Ativos</span><span class="stat-val">500+</span></div>
+                <div class="stat-row"><span style="color: #777">Rakeback Distribuído</span><span class="stat-val" style="color: var(--green)">R$ 400K+</span></div>
+                <div class="stat-row"><span style="color: #777">Taxa de Satisfação</span><span class="stat-val" style="color: var(--yellow)">98%</span></div>
+                <div class="stat-row"><span style="color: #777">Tempo de Saque</span><span class="stat-val" style="color: var(--blue)">&lt; 5min</span></div>
                 <div class="verified-float">🔥 Agente Verificado</div>
             </div>
         </div>
@@ -439,7 +398,6 @@
         <div class="container">
             <span class="tag-pill">Depoimentos</span>
             <h2>O que os <span class="highlight-red">jogadores</span> dizem</h2>
-
             <div class="testimonial-grid">
                 <div class="t-card">
                     <span class="quote">“</span>
@@ -447,7 +405,7 @@
                     <span class="t-tag">✓ Saque em 3 minutos</span>
                     <div class="user-meta">
                         <div class="avatar">RM</div>
-                        <div><strong>Ricardo M.</strong><br><small style="color: #666">Há 2 anos</small></div>
+                        <div><strong>Ricardo M.</strong><br><small style="color: #666">Jogador há 2 anos</small></div>
                         <div class="stars">★★★★★</div>
                     </div>
                 </div>
@@ -463,12 +421,11 @@
                 </div>
                 <div class="t-card">
                     <span class="quote">“</span>
-                    <p class="t-text">"Desde que comecei a jogar na agência do Ninja, minha lucratividade aumentou muito com o rakeback. É um dinheiro extra que faz diferença toda semana."
-                    </p>
+                    <p class="t-text">"Desde que comecei a jogar na agência do Ninja, minha lucratividade aumentou muito com o rakeback. É um dinheiro extra que faz diferença toda semana."</p>
                     <span class="t-tag">✓ Rakeback consistente</span>
                     <div class="user-meta">
                         <div class="avatar">LP</div>
-                        <div><strong>Lucas P.</strong><br><small style="color: #666">Há 1 ano</small></div>
+                        <div><strong>Lucas P.</strong><br><small style="color: #666">Jogador há 1 ano</small></div>
                         <div class="stars">★★★★★</div>
                     </div>
                 </div>
@@ -476,19 +433,18 @@
         </div>
     </section>
 
-    <!-- FINAL CTA ATUALIZADA -->
+    <!-- FINAL CTA -->
     <section class="section-padding final-cta">
         <div class="container">
             <span class="fire-icon">🔥</span>
             <h2>Pronto para jogar no <br><span class="highlight-red">próximo nível?</span></h2>
-            
             <p class="cta-desc">Junte-se a centenas de jogadores que jogam na agência do Ninja.</p>
-            
-            <a href="https://api.whatsapp.com/send?phone=5545999370097" target="_blank" class="btn-primary" style="padding: 20px 40px;">
+            <a href="https://api.whatsapp.com/send?phone=5545999370097" target="_blank" class="btn-primary">
                 Quero jogar na agência do Ninja
             </a>
         </div>
     </section>
+
     <div class="container">
         <footer>
             <div style="font-weight: 700; color: #fff;">Agente Ninja</div>
@@ -504,8 +460,3 @@
 
 </body>
 </html>
-
-
-
-
-
