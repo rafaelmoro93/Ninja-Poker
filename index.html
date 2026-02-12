@@ -232,7 +232,64 @@
             font-size: 14px;
             box-shadow: 0 10px 30px rgba(255, 61, 61, 0.4);
         }
+<!-- DEPOIMENTOS SECTION CORRIGIDA -->
+<section class="section-padding" style="background-color: #050505;">
+    <div class="container text-center">
+        
+        <!-- TAG ESTILIZADA -->
+        <div style="margin-bottom: 24px;">
+            <span class="tag-depoimentos">Depoimentos</span>
+        </div>
 
+        <h2 class="titulo-depoimentos">
+            O que nossos <span class="highlight-red">jogadores</span> dizem
+        </h2>
+        
+        <p class="subtitulo-depoimentos">
+            Veja o que quem joga com o Ninja tem a dizer
+        </p>
+
+        <div class="testimonial-grid">
+            <!-- Os cards entram aqui abaixo -->
+        </div>
+    </div>
+</section>
+
+<style>
+    /* CSS ESPECÍFICO PARA A TAG VIRAR PÍLULA */
+    .tag-depoimentos {
+        background-color: #161616; /* Fundo escuro igual da imagem */
+        border: 1px solid #262626; /* Borda fina */
+        color: #a1a1a1;            /* Cor do texto cinza claro */
+        padding: 6px 20px;
+        border-radius: 100px;      /* Formato arredondado */
+        font-size: 13px;
+        font-weight: 500;
+        display: inline-block;
+        letter-spacing: 0.5px;
+    }
+
+    /* Ajuste do Título para ficar idêntico à imagem (letras juntas) */
+    .titulo-depoimentos {
+        font-size: clamp(32px, 5vw, 52px);
+        font-weight: 800;
+        color: #ffffff;
+        margin-bottom: 12px;
+        letter-spacing: -1.5px; /* Efeito de letras compactas */
+        line-height: 1.1;
+    }
+
+    /* Cor do subtexto cinza */
+    .subtitulo-depoimentos {
+        color: #71717a;
+        font-size: clamp(16px, 2vw, 18px);
+        margin-bottom: 50px;
+    }
+
+    .highlight-red {
+        color: #ff3d3d;
+    }
+</style>
         /* --- DEPOIMENTOS (CORREÇÃO DE ALINHAMENTO CIRÚRGICA) --- */
         .testimonial-grid {
             display: grid;
@@ -482,6 +539,7 @@
 
 </body>
 </html>
+
 
 
 
