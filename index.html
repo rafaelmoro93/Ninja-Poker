@@ -45,7 +45,7 @@
         .highlight-red { color: var(--primary-red); }
         .text-center { text-align: center; }
 
-        /* --- HERO (COMPACTO E CENTRALIZADO) --- */
+        /* --- HERO (COMPACTO) --- */
         .hero {
             padding: 40px 0 60px;
             background: radial-gradient(circle at center, #250808 0%, #050505 70%);
@@ -93,7 +93,7 @@
             font-size: clamp(32px, 7vw, 64px);
             font-weight: 800;
             line-height: 1.1;
-            letter-spacing: -1px;
+            letter-spacing: -1.5px;
             margin-bottom: 15px;
             max-width: 900px;
         }
@@ -119,7 +119,7 @@
             font-size: 16px;
         }
 
-        /* --- VANTAGENS (REPLICAÇÃO IDENTICA) --- */
+        /* --- VANTAGENS (IDENTICO À IMAGEM) --- */
         .section-padding { padding: 80px 0; text-align: center; }
 
         .tag-pill-v2 {
@@ -146,7 +146,6 @@
             padding: 40px;
             border-radius: 24px;
             text-align: left;
-            position: relative;
         }
 
         .border-green { border: 1px solid rgba(34, 197, 94, 0.15); }
@@ -168,65 +167,86 @@
         .card-v2 h3 { font-size: 22px; font-weight: 700; margin-bottom: 15px; }
         .card-v2 p { color: #a1a1a1; font-size: 15px; line-height: 1.6; }
 
-        /* --- COMPROMISSO --- */
+        /* --- COMPROMISSO (ATUALIZADO PARA FICAR IGUAL À IMAGEM) --- */
         .commitment-flex {
             display: flex;
             align-items: center;
-            gap: 40px;
+            gap: 60px;
             text-align: left;
             padding: 80px 0;
         }
 
-        .content-side { flex: 1; }
-        .stats-side { flex: 0 0 420px; width: 100%; }
+        .commitment-content { flex: 1; }
+        .stats-side-v3 { flex: 0 0 440px; }
 
-        .pill-grid {
+        .title-commitment {
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            letter-spacing: -1.5px;
+        }
+
+        .desc-commitment {
+            color: #a1a1a1;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            max-width: 580px;
+        }
+
+        .commitment-pills-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 30px;
+            gap: 12px;
+            margin-top: 40px;
         }
 
-        .pill {
-            background: #0f0f0f;
-            border: 1px solid var(--border-color);
-            padding: 12px 15px;
-            border-radius: 100px;
-            font-size: 13px;
+        .c-pill {
+            background-color: #0d0d0d;
+            border: 1px solid #1a1a1a;
+            padding: 14px 20px;
+            border-radius: 12px;
+            font-size: 14px;
             font-weight: 600;
             display: flex;
-            align-items: center; gap: 8px;
+            align-items: center;
+            gap: 10px;
         }
 
-        .stats-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            padding: 30px;
+        .stats-card-v3 {
+            background-color: #0d0d0d;
+            border: 1px solid #1a1a1a;
+            padding: 40px;
             border-radius: 24px;
             position: relative;
         }
 
-        .stat-row {
+        .stat-row-v3 {
             display: flex;
             justify-content: space-between;
-            padding: 18px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.03);
+            padding: 22px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .stat-val { font-size: 20px; font-weight: 800; }
-        .verified-float {
+        .stat-val-v3 { font-size: 22px; font-weight: 800; }
+
+        .verified-badge-v3 {
             position: absolute;
-            bottom: -15px;
+            bottom: -20px;
             left: 20px;
-            background: var(--primary-red);
-            padding: 10px 20px;
-            border-radius: 10px;
+            background-color: #ff3d3d;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 12px;
             font-weight: 800;
-            font-size: 14px;
-            box-shadow: 0 10px 30px rgba(255, 61, 61, 0.4);
+            box-shadow: 0 0 25px rgba(255, 61, 61, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        /* --- DEPOIMENTOS (REPLICAÇÃO IDENTICA E ALINHADA) --- */
+        /* --- DEPOIMENTOS (TAG ESCURA E ALINHAMENTO) --- */
         .tag-depoimentos {
             background-color: #161616;
             border: 1px solid #262626;
@@ -237,13 +257,6 @@
             font-weight: 500;
             display: inline-block;
             margin-bottom: 24px;
-        }
-
-        .titulo-depoimentos {
-            font-size: clamp(32px, 5vw, 52px);
-            font-weight: 800;
-            letter-spacing: -1.5px;
-            margin-bottom: 12px;
         }
 
         .testimonial-grid {
@@ -258,19 +271,17 @@
             background: var(--bg-card);
             padding: 35px;
             border-radius: 24px;
-            text-align: left;
             display: flex;
             flex-direction: column;
         }
 
-        .quote { font-size: 40px; color: #222; margin-bottom: -5px; line-height: 1; display: block; }
-        
-        .t-text-box {
-            min-height: 100px; /* Alinhamento dos selos ✓ */
-            margin-bottom: 15px;
+        .t-content-area {
+            min-height: 120px;
+            display: block;
         }
 
-        .t-text { color: #e5e7eb; font-size: 14px; }
+        .quote { font-size: 40px; color: #222; line-height: 1; display: block; margin-bottom: -5px; }
+        .t-text { color: #e5e7eb; font-size: 14px; margin-bottom: 15px; }
 
         .t-tag {
             color: var(--primary-red);
@@ -297,12 +308,9 @@
             font-weight: 800; font-size: 13px;
         }
 
-        .stars { color: var(--yellow); font-size: 10px; margin-left: auto; letter-spacing: 1px; }
-
         /* --- FINAL CTA --- */
         .final-cta { padding: 80px 0; text-align: center; }
         .fire-icon { font-size: 40px; margin-bottom: 20px; display: block; }
-        .cta-desc { color: var(--text-gray); margin: 15px auto 25px; max-width: 600px; font-size: 15px; }
 
         footer {
             border-top: 1px solid #111;
@@ -329,20 +337,19 @@
             box-shadow: 0 5px 20px rgba(0,0,0,0.5);
         }
 
-        /* --- RESPONSIVIDADE TOTAL --- */
         @media (max-width: 900px) {
             .feature-grid-v2, .testimonial-grid { grid-template-columns: 1fr; }
             .commitment-flex { flex-direction: column; text-align: center; }
-            .stats-side { flex: none; width: 100%; }
-            .pill-grid { grid-template-columns: 1fr; }
-            .t-text-box { min-height: auto; }
-            .verified-float { left: 50%; transform: translateX(-50%); }
+            .stats-side-v3 { flex: none; width: 100%; }
+            .commitment-pills-grid { grid-template-columns: 1fr; }
+            .t-content-area { min-height: auto; }
+            .verified-badge-v3 { left: 50%; transform: translateX(-50%); }
         }
     </style>
 </head>
 <body>
 
-    <!-- HERO SECTION -->
+    <!-- HERO -->
     <header class="hero">
         <div class="container">
             <img src="logo.png" alt="Agente Ninja" class="logo-ninja">
@@ -355,12 +362,12 @@
         </div>
     </header>
 
-    <!-- VANTAGENS SECTION -->
+    <!-- VANTAGENS -->
     <section class="section-padding">
         <div class="container">
             <span class="tag-pill-v2">Vantagens Exclusivas</span>
-            <h2 class="titulo-depoimentos">Por que jogar com o <span class="highlight-red">Ninja?</span></h2>
-            <p style="color: #a1a1a1; margin-bottom: 50px;">Benefícios pensados para maximizar seus ganhos e sua experiência no poker</p>
+            <h2 style="font-size: clamp(32px, 5vw, 56px); font-weight: 800; letter-spacing: -1.5px; margin-bottom: 15px;">Por que jogar com o <span class="highlight-red">Ninja?</span></h2>
+            <p style="color: #a1a1a1; margin-bottom: 50px; font-size: 18px;">Benefícios pensados para maximizar seus ganhos e sua experiência no poker</p>
 
             <div class="feature-grid-v2">
                 <div class="card-v2 border-green">
@@ -384,73 +391,52 @@
 
     <!-- COMPROMISSO -->
     <section class="container commitment-flex">
-        <div class="content-side">
-            <span class="tag-pill">Nosso Compromisso</span>
-            <h2>Confiança, suporte e <br><span class="highlight-red">estratégia.</span></h2>
-            <p style="color: var(--text-gray); margin-top: 25px;">O <strong>Agente Ninja</strong> trabalha diretamente com jogadores do Suprema Poker oferecendo suporte personalizado, gestão de banca e acompanhamento estratégico para quem quer crescer no jogo.</p>
-            <p style="color: var(--text-gray); margin-top: 20px;">Com anos de experiência no mercado, entendemos as necessidades dos jogadores e oferecemos um serviço completo para que você foque apenas em jogar e lucrar.</p>
+        <div class="commitment-content">
+            <span class="tag-pill-v2" style="background: rgba(255, 61, 61, 0.1); font-size: 11px; letter-spacing: 0.5px;">NOSSO COMPROMISSO</span>
+            <h2 class="title-commitment">Confiança, suporte e <br><span class="highlight-red">estratégia.</span></h2>
+            <p class="desc-commitment">O <strong>Agente Ninja</strong> trabalha diretamente com jogadores do Suprema Poker oferecendo suporte personalizado, gestão de banca e acompanhamento estratégico para quem quer crescer no jogo.</p>
+            <p class="desc-commitment">Com anos de experiência no mercado, entendemos as necessidades dos jogadores e oferecemos um serviço completo para que você foque apenas em jogar e lucrar.</p>
             
-            <div class="pill-grid">
-                <div class="pill">🛡️ Segurança Total</div>
-                <div class="pill">👥 Suporte Personalizado</div>
-                <div class="pill">📈 Gestão de Banca</div>
-                <div class="pill">🎧 Atendimento 24h</div>
+            <div class="commitment-pills-grid">
+                <div class="c-pill">🛡️ Segurança Total</div>
+                <div class="c-pill">👥 Suporte Personalizado</div>
+                <div class="c-pill">📈 Gestão de Banca</div>
+                <div class="c-pill">🎧 Atendimento 24h</div>
             </div>
         </div>
-        <div class="stats-side">
-            <div class="stats-card">
-                <div class="stat-row"><span style="color: #777">Jogadores Ativos</span><span class="stat-val">500+</span></div>
-                <div class="stat-row"><span style="color: #777">Rakeback Distribuído</span><span class="stat-val" style="color: var(--green)">R$ 400K+</span></div>
-                <div class="stat-row"><span style="color: #777">Taxa de Satisfação</span><span class="stat-val" style="color: var(--yellow)">98%</span></div>
-                <div class="stat-row"><span style="color: #777">Tempo de Saque</span><span class="stat-val" style="color: var(--blue)">&lt; 5min</span></div>
-                <div class="verified-float">🔥 Agente Verificado</div>
+        <div class="stats-side-v3">
+            <div class="stats-card-v3">
+                <div class="stat-row-v3"><span style="color: #71717a; font-weight: 500;">Jogadores Ativos</span><span class="stat-val-v3">500+</span></div>
+                <div class="stat-row-v3"><span style="color: #71717a; font-weight: 500;">Rakeback Distribuído</span><span class="stat-val-v3" style="color: var(--green);">R$ 400K+</span></div>
+                <div class="stat-row-v3"><span style="color: #71717a; font-weight: 500;">Taxa de Satisfação</span><span class="stat-val-v3" style="color: var(--yellow);">98%</span></div>
+                <div class="stat-row-v3" style="border:none;"><span style="color: #71717a; font-weight: 500;">Tempo de Saque</span><span class="stat-val-v3" style="color: var(--blue);">&lt; 5min</span></div>
+                <div class="verified-badge-v3">🔥 Agente Verificado</div>
             </div>
         </div>
     </section>
 
-    <!-- DEPOIMENTOS SECTION -->
+    <!-- DEPOIMENTOS -->
     <section class="section-padding" style="background-color: #050505;">
         <div class="container text-center">
             <span class="tag-depoimentos">Depoimentos</span>
-            <h2 class="titulo-depoimentos">O que nossos <span class="highlight-red">jogadores</span> dizem</h2>
-            <p style="color: #71717a; margin-bottom: 50px;">Veja o que quem joga com o Ninja tem a dizer</p>
+            <h2 style="font-size: clamp(32px, 5vw, 52px); font-weight: 800; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 12px;">O que nossos <span class="highlight-red">jogadores</span> dizem</h2>
+            <p style="color: #71717a; font-size: clamp(16px, 2vw, 18px); margin-bottom: 50px;">Veja o que quem joga com o Ninja tem a dizer</p>
 
             <div class="testimonial-grid">
                 <div class="t-card">
-                    <div class="t-content-area">
-                        <span class="quote">“</span>
-                        <div class="t-text-box"><p class="t-text">"O saque mais rápido que já vi! Pedi o Pix e em menos de 3 minutos já estava na minha conta. Impressionante a agilidade."</p></div>
-                    </div>
+                    <div class="t-content-area"><span class="quote">“</span><p class="t-text">"O saque mais rápido que já vi! Pedi o Pix e em menos de 3 minutos já estava na minha conta. Impressionante a agilidade."</p></div>
                     <span class="t-tag">✓ Saque em 3 minutos</span>
-                    <div class="user-meta">
-                        <div class="avatar">RM</div>
-                        <div><strong>Ricardo M.</strong><br><small style="color: #666">Há 2 anos</small></div>
-                        <div class="stars">★★★★★</div>
-                    </div>
+                    <div class="user-meta"><div class="avatar">RM</div><div><strong>Ricardo M.</strong><br><small style="color: #666">Há 2 anos</small></div><span style="color: var(--yellow); font-size: 10px; margin-left: auto; letter-spacing: 1px;">★★★★★</span></div>
                 </div>
                 <div class="t-card">
-                    <div class="t-content-area">
-                        <span class="quote">“</span>
-                        <div class="t-text-box"><p class="t-text">"O suporte é impecável. Tive uma dúvida às 2h da manhã e fui respondido na hora. Rakeback sempre certinho."</p></div>
-                    </div>
+                    <div class="t-content-area"><span class="quote">“</span><p class="t-text">"O suporte é impecável. Tive uma dúvida às 2h da manhã e fui respondido na hora. Rakeback sempre certinho."</p></div>
                     <span class="t-tag">✓ Suporte 24h</span>
-                    <div class="user-meta">
-                        <div class="avatar">FS</div>
-                        <div><strong>Fernando S.</strong><br><small style="color: #666">Profissional</small></div>
-                        <div class="stars">★★★★★</div>
-                    </div>
+                    <div class="user-meta"><div class="avatar">FS</div><div><strong>Fernando S.</strong><br><small style="color: #666">Profissional</small></div><span style="color: var(--yellow); font-size: 10px; margin-left: auto; letter-spacing: 1px;">★★★★★</span></div>
                 </div>
                 <div class="t-card">
-                    <div class="t-content-area">
-                        <span class="quote">“</span>
-                        <div class="t-text-box"><p class="t-text">"Desde que comecei a jogar na agência do Ninja, minha lucratividade aumentou muito com o rakeback. É um dinheiro extra que faz diferença toda semana."</p></div>
-                    </div>
+                    <div class="t-content-area"><span class="quote">“</span><p class="t-text">"Desde que comecei a jogar na agência do Ninja, minha lucratividade aumentou muito com o rakeback. É um dinheiro extra que faz diferença toda semana."</p></div>
                     <span class="t-tag">✓ Rakeback consistente</span>
-                    <div class="user-meta">
-                        <div class="avatar">LP</div>
-                        <div><strong>Lucas P.</strong><br><small style="color: #666">Há 1 ano</small></div>
-                        <div class="stars">★★★★★</div>
-                    </div>
+                    <div class="user-meta"><div class="avatar">LP</div><div><strong>Lucas P.</strong><br><small style="color: #666">Há 1 ano</small></div><span style="color: var(--yellow); font-size: 10px; margin-left: auto; letter-spacing: 1px;">★★★★★</span></div>
                 </div>
             </div>
         </div>
@@ -460,28 +446,19 @@
     <section class="section-padding final-cta">
         <div class="container">
             <span class="fire-icon">🔥</span>
-            <h2>Pronto para jogar no <br><span class="highlight-red">próximo nível?</span></h2>
+            <h2 style="font-size: clamp(28px, 6vw, 48px); font-weight: 800; margin-bottom: 15px;">Pronto para jogar no <br><span class="highlight-red">próximo nível?</span></h2>
             <p class="cta-desc">Junte-se a centenas de jogadores que jogam na agência do Ninja.</p>
-            <a href="https://api.whatsapp.com/send?phone=5545999370097" target="_blank" class="btn-primary">
-                Quero jogar na agência do Ninja
-            </a>
+            <a href="https://api.whatsapp.com/send?phone=5545999370097" target="_blank" class="btn-primary" style="padding: 20px 40px;">Quero jogar na agência do Ninja</a>
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
-        <div style="font-weight: 700; color: #fff;">Agente Ninja</div>
+        <div style="font-weight: 700; color: #fff; font-size: 14px;">Agente Ninja</div>
         <div>© 2026 Agente Ninja. Todos os direitos reservados.</div>
         <div>Jogue com responsabilidade. +18</div>
     </footer>
 
-    <!-- WHATSAPP FLOAT -->
-    <a href="https://api.whatsapp.com/send?phone=5545999370097" target="_blank" class="wa-float">
-        WhatsApp
-    </a>
+    <a href="https://api.whatsapp.com/send?phone=5545999370097" target="_blank" class="wa-float">WhatsApp</a>
 
 </body>
 </html>
-
-
-
