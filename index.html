@@ -45,7 +45,7 @@
         .highlight-red { color: var(--primary-red); }
         .text-center { text-align: center; }
 
-        /* --- HERO (COMPACTO) --- */
+        /* --- HERO --- */
         .hero {
             padding: 40px 0 60px;
             background: radial-gradient(circle at center, #250808 0%, #050505 70%);
@@ -119,7 +119,7 @@
             font-size: 16px;
         }
 
-        /* --- VANTAGENS (IDENTICO À IMAGEM) --- */
+        /* --- VANTAGENS (ALTERADO CONFORME SOLICITADO) --- */
         .section-padding { padding: 80px 0; text-align: center; }
 
         .tag-pill-v2 {
@@ -141,11 +141,15 @@
             margin-top: 50px;
         }
 
+        /* Card ajustado para layout horizontal */
         .card-v2 {
             background: #0d0d0d;
-            padding: 40px;
+            padding: 30px;
             border-radius: 24px;
             text-align: left;
+            display: flex; /* Alinha ícone e texto lado a lado */
+            align-items: flex-start;
+            gap: 20px;
         }
 
         .border-green { border: 1px solid rgba(34, 197, 94, 0.15); }
@@ -153,21 +157,21 @@
         .border-blue { border: 1px solid rgba(59, 130, 246, 0.15); }
 
         .icon-box-v2 {
-            width: 56px;
-            height: 56px;
+            width: 52px;
+            height: 52px;
             border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
-            margin-bottom: 30px;
+            font-size: 22px;
             background: rgba(255, 255, 255, 0.03);
+            flex-shrink: 0; /* Impede o ícone de diminuir */
         }
 
-        .card-v2 h3 { font-size: 22px; font-weight: 700; margin-bottom: 15px; }
-        .card-v2 p { color: #a1a1a1; font-size: 15px; line-height: 1.6; }
+        .card-v2 h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; line-height: 1.3; }
+        .card-v2 p { color: #a1a1a1; font-size: 14px; line-height: 1.5; }
 
-        /* --- COMPROMISSO (ATUALIZADO PARA FICAR IGUAL À IMAGEM) --- */
+        /* --- COMPROMISSO --- */
         .commitment-flex {
             display: flex;
             align-items: center;
@@ -246,7 +250,7 @@
             gap: 8px;
         }
 
-        /* --- DEPOIMENTOS (TAG ESCURA E ALINHAMENTO) --- */
+        /* --- DEPOIMENTOS --- */
         .tag-depoimentos {
             background-color: #161616;
             border: 1px solid #262626;
@@ -344,6 +348,8 @@
             .commitment-pills-grid { grid-template-columns: 1fr; }
             .t-content-area { min-height: auto; }
             .verified-badge-v3 { left: 50%; transform: translateX(-50%); }
+            /* Pequeno ajuste para manter o texto alinhado no mobile */
+            .card-v2 { padding: 25px 20px; gap: 15px; }
         }
     </style>
 </head>
@@ -362,7 +368,7 @@
         </div>
     </header>
 
-    <!-- VANTAGENS -->
+    <!-- VANTAGENS (CONTEÚDO ALTERADO) -->
     <section class="section-padding">
         <div class="container">
             <span class="tag-pill-v2">Vantagens Exclusivas</span>
@@ -370,20 +376,29 @@
             <p style="color: #a1a1a1; margin-bottom: 50px; font-size: 18px;">Benefícios pensados para maximizar seus ganhos e sua experiência no poker</p>
 
             <div class="feature-grid-v2">
+                <!-- Card Rakeback -->
                 <div class="card-v2 border-green">
                     <div class="icon-box-v2"><span style="color: var(--green)">%</span></div>
-                    <h3>Rakeback Exclusivo</h3>
-                    <p>Receba parte do rake de volta e aumente sua lucratividade mensal.</p>
+                    <div class="card-text-wrapper">
+                        <h3>Rakeback Exclusivo</h3>
+                        <p>Receba parte do rake de volta e aumente sua lucratividade mensal.</p>
+                    </div>
                 </div>
+                <!-- Card VIP Gold -->
                 <div class="card-v2 border-yellow">
                     <div class="icon-box-v2">👑</div>
-                    <h3>VIP Gold Mensal</h3>
-                    <p>Status VIP garantido todos os meses para jogadores ativos.</p>
+                    <div class="card-text-wrapper">
+                        <h3>VIP Gold Mensal</h3>
+                        <p>Status VIP garantido todos os meses para jogadores ativos.</p>
+                    </div>
                 </div>
+                <!-- Card Saques -->
                 <div class="card-v2 border-blue">
                     <div class="icon-box-v2"><span style="color: var(--blue)">⚡</span></div>
-                    <h3>Saques Instantâneos no Pix</h3>
-                    <p>Receba seus ganhos de forma rápida, segura e sem burocracia.</p>
+                    <div class="card-text-wrapper">
+                        <h3>Saque Instantâneo</h3>
+                        <p>Receba seus ganhos de forma rápida, segura e sem burocracia.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -462,4 +477,3 @@
 
 </body>
 </html>
-
