@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Agente Ninja - Suprema Poker Oficial</title>
     
-    <!-- Meta Tags -->
-    <meta name="description" content="Acesse a agência oficial Agente Ninja no Suprema Poker. Suporte especializado, rakeback e agilidade no processamento.">
-    <meta property="og:title" content="Agente Ninja - Suprema Poker">
-    <meta property="og:type" content="website">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
@@ -25,93 +20,100 @@
             --green: #22c55e;
             --yellow: #facc15;
             --blue: #3b82f6;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         /* --- BASE --- */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-        html { scroll-behavior: smooth; }
         body { background-color: var(--bg-black); color: var(--text-white); line-height: 1.5; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
         .container { width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 5%; }
         .highlight-red { color: var(--primary-red); }
-        .text-center { text-align: center; }
+        
+        /* Títulos de Seção Unificados */
+        h2.section-title { 
+            font-size: clamp(30px, 8vw, 52px); 
+            font-weight: 900; 
+            letter-spacing: -1.5px; 
+            margin-bottom: 20px; 
+        }
 
         /* --- HERO --- */
-        .hero { padding: clamp(40px, 8vh, 80px) 0; background: radial-gradient(circle at center, #220808 0%, #050505 90%); display: flex; align-items: center; min-height: 85vh; }
-        .hero .container { display: flex; flex-direction: column; align-items: center; text-align: center; }
-        .logo-ninja { width: 100%; max-width: clamp(140px, 20vw, 180px); height: auto; margin-bottom: 25px; }
+        .hero { padding: 60px 0; background: radial-gradient(circle at center, #220808 0%, #050505 90%); display: flex; align-items: center; min-height: 85vh; text-align: center; }
+        .hero .container { display: flex; flex-direction: column; align-items: center; }
+        .logo-ninja { width: 100%; max-width: 180px; height: auto; margin-bottom: 25px; }
 
         .badge-oficial {
-            display: inline-flex; align-items: center; justify-content: center; flex-wrap: nowrap;
+            display: inline-flex; align-items: center; justify-content: center;
             background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color);
             padding: 8px 16px; border-radius: 100px; margin-bottom: 25px;
-            font-size: clamp(10px, 3vw, 14px); font-weight: 600; color: #efefef; gap: 5px;
-            white-space: nowrap;
+            font-size: clamp(10px, 3vw, 14px); font-weight: 600; color: #efefef; white-space: nowrap;
         }
-        .separator-dot { color: var(--green); margin: 0 5px; font-size: 1.2em; }
+        .separator-dot { color: var(--green); margin: 0 8px; font-size: 1.2em; }
 
-        h1 { font-size: clamp(30px, 8vw, 64px); font-weight: 900; line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 20px; }
+        h1 { font-size: clamp(32px, 8vw, 64px); font-weight: 900; line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 20px; }
         .subtext-hero { font-size: clamp(15px, 4vw, 18px); color: var(--text-gray); max-width: 600px; margin-bottom: 35px; }
 
         .btn-primary {
             background: var(--primary-red); color: white; text-decoration: none;
-            padding: 18px 35px; border-radius: 16px;
-            font-weight: 800; display: inline-flex; align-items: center; gap: 12px;
-            font-size: clamp(14px, 4vw, 17px); transition: var(--transition);
+            padding: 18px 35px; border-radius: 16px; font-weight: 800; 
+            display: inline-flex; align-items: center; gap: 12px;
+            font-size: clamp(14px, 4vw, 17px); transition: 0.3s;
             box-shadow: 0 10px 25px rgba(255, 61, 61, 0.3);
         }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(255, 61, 61, 0.4); }
-
-        /* --- SECTIONS --- */
-        .section-padding { padding: clamp(60px, 10vh, 100px) 0; }
-        h2.section-title { font-size: clamp(32px, 8vw, 52px); font-weight: 900; margin-bottom: 20px; letter-spacing: -1px; }
 
         /* --- VANTAGENS --- */
+        .section-padding { padding: 80px 0; }
         .feature-grid-v2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 40px; }
-        .card-v2 { background: var(--bg-card); padding: 30px; border-radius: 28px; text-align: left; border: 1px solid #1a1a1a; display: flex; flex-direction: column; gap: 12px; }
-        .card-header { display: flex; align-items: center; gap: 12px; }
-        .card-v2 h3 { font-size: 18px; font-weight: 800; }
-        .card-v2 p { color: var(--text-gray); font-size: 14px; line-height: 1.6; }
+        .card-v2 { background: var(--bg-card); padding: 30px; border-radius: 28px; text-align: left; border: 1px solid #1a1a1a; display: flex; flex-direction: column; gap: 15px; }
+        .card-header { display: flex; align-items: center; gap: 15px; }
+        .card-v2 h3 { font-size: 19px; font-weight: 800; }
+        .card-v2 p { color: var(--text-gray); font-size: 14.5px; }
 
-        /* --- COMPROMISSO (Onde estava o erro de centralização) --- */
-        .commitment-flex { display: flex; flex-wrap: wrap; align-items: center; gap: 50px; padding: 60px 0; justify-content: center; }
-        .commitment-content { flex: 1; min-width: 320px; text-align: center; } /* Centralizado por padrão */
+        /* --- COMPROMISSO (ESTRUTURA PC E MOBILE) --- */
+        .commitment-wrapper { display: flex; align-items: center; gap: 60px; text-align: left; }
         
-        .benefits-mini-grid { 
+        /* Grid de 4 Itens */
+        .benefits-grid { 
             display: grid; grid-template-columns: repeat(2, 1fr); 
-            gap: 20px; margin: 30px auto 0; max-width: 500px;
-            justify-items: center; /* Centraliza os itens no grid */
+            gap: 20px; margin-top: 30px; 
         }
-        .benefit-item { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: clamp(12px, 3.5vw, 14px); text-align: left; }
+        .benefit-item { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 15px; }
 
-        /* --- STATS --- */
-        .stats-side-v3 { flex: 1; min-width: 320px; max-width: 480px; margin: 0 auto; }
-        .stats-card-v3 { background: var(--bg-card); padding: 35px; border-radius: 32px; border: 1px solid #1a1a1a; position: relative; }
-        .stat-row-v3 { display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
-        .stat-val-v3 { font-weight: 900; font-size: 20px; }
-        .verified-badge-v3 { position: absolute; bottom: -18px; left: 50%; transform: translateX(-50%); background: var(--primary-red); padding: 10px 22px; border-radius: 12px; font-weight: 800; font-size: 13px; display: flex; align-items: center; gap: 8px; white-space: nowrap; box-shadow: 0 8px 20px rgba(255, 61, 61, 0.3); }
+        /* Stats Card */
+        .stats-side { flex: 0 0 450px; }
+        .stats-card { background: var(--bg-card); padding: 40px; border-radius: 32px; border: 1px solid #1a1a1a; position: relative; }
+        .stat-row { display: flex; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .stat-val { font-weight: 900; font-size: 22px; }
+        .verified-badge { position: absolute; bottom: -20px; left: 30px; background: var(--primary-red); padding: 12px 25px; border-radius: 14px; font-weight: 800; font-size: 14px; display: flex; align-items: center; gap: 10px; box-shadow: 0 10px 20px rgba(255, 61, 61, 0.3); }
 
         /* --- TESTEMUNHOS --- */
         .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 50px; }
         .t-card { background: var(--bg-card); padding: 35px; border-radius: 28px; border: 1px solid #1a1a1a; text-align: left; }
-        .t-text { color: #e5e7eb; font-size: 14px; margin: 15px 0; font-style: italic; }
-        .user-meta { display: flex; align-items: center; gap: 12px; border-top: 1px solid #1a1a1a; padding-top: 20px; }
-        .avatar { width: 40px; height: 40px; background: var(--primary-red); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; }
+        .t-text { color: #e5e7eb; font-size: 15px; margin-bottom: 20px; font-style: italic; }
 
         /* --- FOOTER --- */
-        footer { border-top: 1px solid #111; padding: 60px 0; text-align: center; background: #030303; font-size: 11px; color: #555; }
-        .footer-links { display: flex; justify-content: center; gap: 20px; margin: 15px 0; flex-wrap: wrap; }
+        footer { border-top: 1px solid #111; padding: 60px 0; text-align: center; background: #030303; font-size: 12px; color: #555; }
+        .footer-links { display: flex; justify-content: center; gap: 25px; margin: 20px 0; }
         .footer-links a { color: #888; text-decoration: none; }
 
-        /* WHATSAPP FLOAT */
-        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; padding: 12px 22px; border-radius: 50px; color: white; text-decoration: none; font-weight: 700; z-index: 9999; display: flex; align-items: center; gap: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.4); font-size: 14px; transition: var(--transition); }
-        
-        @media (max-width: 600px) {
+        /* WHATSAPP */
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; padding: 12px 25px; border-radius: 50px; color: white; text-decoration: none; font-weight: 700; z-index: 9999; display: flex; align-items: center; gap: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); font-size: 15px; }
+
+        /* --- MOBILE RESPONSIVE --- */
+        @media (max-width: 900px) {
             .hero { padding: 40px 0; }
             .btn-primary { width: 100%; justify-content: center; }
-            .wa-float { bottom: 15px; left: 15px; right: 15px; justify-content: center; }
+            .section-padding { padding: 60px 0; text-align: center; }
+            
+            /* Ajuste Seção Compromisso no Mobile */
+            .commitment-wrapper { flex-direction: column; text-align: center; gap: 40px; }
+            .benefits-grid { justify-items: center; max-width: 400px; margin: 30px auto 0; }
+            .benefit-item { font-size: 13px; }
+            
+            .stats-side { flex: none; width: 100%; max-width: 450px; }
+            .verified-badge { left: 50%; transform: translateX(-50%); }
+            
+            .wa-float { width: calc(100% - 40px); left: 20px; right: 20px; justify-content: center; bottom: 20px; }
             body { padding-bottom: 80px; }
-            .benefits-mini-grid { gap: 15px; }
         }
     </style>
 </head>
@@ -121,17 +123,14 @@
     <header class="hero">
         <div class="container">
             <img src="logo.png" alt="Agente Ninja" class="logo-ninja">
-            
             <div class="badge-oficial">
                 <img src="https://api.iconify.design/lucide:check-circle-2.svg?color=%2322c55e" width="16" height="16">
-                <span>Agente Oficial Certificado</span>
+                <span style="margin-left:6px">Agente Oficial Certificado</span>
                 <span class="separator-dot">•</span>
                 <span>Clube H10-1</span>
             </div>
-
             <h1>Jogue no Suprema Poker <br> <span class="highlight-red">com quem entende do jogo.</span></h1>
             <p class="subtext-hero">Entre para a agência do <strong>Agente Ninja</strong> e garanta suporte especializado no esporte da mente.</p>
-            
             <a href="https://api.whatsapp.com/send?phone=5545999370097" target="_blank" class="btn-primary">
                 Quero jogar na agência do Ninja <span>&rsaquo;</span>
             </a>
@@ -142,27 +141,27 @@
     <section class="section-padding text-center">
         <div class="container">
             <h2 class="section-title">Por que jogar com o <span class="highlight-red">Ninja?</span></h2>
-            
             <div class="feature-grid-v2">
+                <!-- Rakeback -->
                 <div class="card-v2" style="border-bottom: 4px solid var(--green);">
                     <div class="card-header">
-                        <span style="color: var(--green); font-weight: 900; font-size: 22px;">%</span>
+                        <span style="color: var(--green); font-weight: 900; font-size: 24px;">%</span>
                         <h3>Rakeback Exclusivo</h3>
                     </div>
                     <p>Receba parte do rake de volta e aumente sua performance nas mesas do Suprema.</p>
                 </div>
-
+                <!-- VIP -->
                 <div class="card-v2" style="border-bottom: 4px solid var(--yellow);">
                     <div class="card-header">
-                        <img src="https://api.iconify.design/lucide:crown.svg?color=%23facc15" width="22" height="22">
+                        <img src="https://api.iconify.design/lucide:crown.svg?color=%23facc15" width="24" height="24">
                         <h3>VIP Gold Mensal</h3>
                     </div>
                     <p>Status premium garantido para jogadores que buscam excelência todos os meses.</p>
                 </div>
-
+                <!-- Ágeis -->
                 <div class="card-v2" style="border-bottom: 4px solid var(--blue);">
                     <div class="card-header">
-                        <img src="https://api.iconify.design/lucide:zap.svg?color=%233b82f6" width="22" height="22">
+                        <img src="https://api.iconify.design/lucide:zap.svg?color=%233b82f6" width="24" height="24">
                         <h3>Processos Ágeis</h3>
                     </div>
                     <p>Sistemas otimizados para garantir total fluidez e rapidez nos resgates.</p>
@@ -171,29 +170,29 @@
         </div>
     </section>
 
-    <!-- COMPROMISSO & ESTRATÉGIA (CORRIGIDO) -->
+    <!-- COMPROMISSO -->
     <section class="section-padding" style="background: #080808;">
-        <div class="container text-center">
-            <h2 class="section-title">Segurança e <span class="highlight-red">Estratégia.</span></h2>
-            <p style="color: var(--text-gray); font-size: clamp(15px, 4vw, 17px); margin: 0 auto 30px; max-width: 600px;">Oferecemos suporte personalizado, consultoria e gestão técnica para quem busca evolução constante no Suprema Poker.</p>
-            
-            <div class="commitment-flex">
+        <div class="container">
+            <div class="commitment-wrapper">
                 <div class="commitment-content">
-                    <div class="benefits-mini-grid">
-                        <div class="benefit-item"><img src="https://api.iconify.design/lucide:shield-check.svg?color=%23ff3d3d" width="18" height="18">Segurança Total</div>
-                        <div class="benefit-item"><img src="https://api.iconify.design/lucide:user-check.svg?color=%23ff3d3d" width="18" height="18">Suporte VIP</div>
-                        <div class="benefit-item"><img src="https://api.iconify.design/lucide:target.svg?color=%23ff3d3d" width="18" height="18">Estratégia</div>
-                        <div class="benefit-item"><img src="https://api.iconify.design/lucide:trending-up.svg?color=%23ff3d3d" width="18" height="18">Gestão</div>
+                    <h2 class="section-title">Segurança e <br><span class="highlight-red">Estratégia.</span></h2>
+                    <p style="color: var(--text-gray); font-size: 17px; max-width: 550px;">Oferecemos suporte personalizado, consultoria e gestão técnica para quem busca evolução constante no Suprema Poker.</p>
+                    
+                    <div class="benefits-grid">
+                        <div class="benefit-item"><img src="https://api.iconify.design/lucide:shield-check.svg?color=%23ff3d3d" width="20" height="20">Segurança Total</div>
+                        <div class="benefit-item"><img src="https://api.iconify.design/lucide:user-check.svg?color=%23ff3d3d" width="20" height="20">Suporte VIP</div>
+                        <div class="benefit-item"><img src="https://api.iconify.design/lucide:target.svg?color=%23ff3d3d" width="20" height="20">Estratégia Técnica</div>
+                        <div class="benefit-item"><img src="https://api.iconify.design/lucide:trending-up.svg?color=%23ff3d3d" width="20" height="20">Gestão de Banca</div>
                     </div>
                 </div>
 
-                <div class="stats-side-v3">
-                    <div class="stats-card-v3">
-                        <div class="stat-row-v3"><span>Jogadores Ativos</span><span class="stat-val-v3">500+</span></div>
-                        <div class="stat-row-v3"><span>Taxa de Satisfação</span><span class="stat-val-v3" style="color: var(--yellow);">98%</span></div>
-                        <div class="stat-row-v3" style="border:none;"><span>Agilidade</span><span class="stat-val-v3" style="color: var(--blue);">&lt; 5min</span></div>
-                        <div class="verified-badge-v3">
-                            <img src="https://api.iconify.design/lucide:shield-check.svg?color=white" width="16" height="16">
+                <div class="stats-side">
+                    <div class="stats-card">
+                        <div class="stat-row"><span>Jogadores Ativos</span><span class="stat-val">500+</span></div>
+                        <div class="stat-row"><span>Taxa de Satisfação</span><span class="stat-val" style="color: var(--yellow);">98%</span></div>
+                        <div class="stat-row" style="border:none;"><span>Agilidade</span><span class="stat-val" style="color: var(--blue);">&lt; 5min</span></div>
+                        <div class="verified-badge">
+                            <img src="https://api.iconify.design/lucide:shield-check.svg?color=white" width="18" height="18">
                             Agente Verificado
                         </div>
                     </div>
@@ -209,24 +208,15 @@
             <div class="testimonial-grid">
                 <div class="t-card">
                     <p class="t-text">"Processamento ágil e suporte diferenciado. Em menos de 5 minutos tive minhas solicitações atendidas."</p>
-                    <div class="user-meta">
-                        <div class="avatar">RM</div>
-                        <div><strong>Ricardo M.</strong><br><small style="color:#555">VIP há 2 anos</small></div>
-                    </div>
+                    <div style="display:flex; align-items:center;"><div class="avatar">RM</div><div><strong>Ricardo M.</strong><br><small style="color:#555">VIP há 2 anos</small></div></div>
                 </div>
                 <div class="t-card">
-                    <p class="t-text">"Suporte impecável. Tive uma dúvida de madrugada e fui atendido na hora. Recomendo muito."</p>
-                    <div class="user-meta">
-                        <div class="avatar">FS</div>
-                        <div><strong>Fernando S.</strong><br><small style="color:#555">Profissional</small></div>
-                    </div>
+                    <p class="t-text">"O melhor suporte que já utilizei. Atendimento humanizado e rakeback sempre pontual."</p>
+                    <div style="display:flex; align-items:center;"><div class="avatar">FS</div><div><strong>Fernando S.</strong><br><small style="color:#555">Profissional</small></div></div>
                 </div>
                 <div class="t-card">
-                    <p class="t-text">"As condições de rakeback e o suporte técnico me ajudaram a evoluir no clube."</p>
-                    <div class="user-meta">
-                        <div class="avatar">LP</div>
-                        <div><strong>Lucas P.</strong><br><small style="color:#555">Membro do Clube</small></div>
-                    </div>
+                    <p class="t-text">"Confiança é tudo no poker, e na agência do Ninja eu jogo tranquilo sabendo que o suporte é 24h."</p>
+                    <div style="display:flex; align-items:center;"><div class="avatar">LP</div><div><strong>Lucas P.</strong><br><small style="color:#555">Há 1 ano no clube</small></div></div>
                 </div>
             </div>
         </div>
@@ -235,9 +225,8 @@
     <!-- FINAL CTA -->
     <section class="section-padding text-center" style="background: radial-gradient(circle at center, #150505 0%, #050505 100%);">
         <div class="container">
-            <div style="margin-bottom: 25px;"><img src="https://api.iconify.design/lucide:rocket.svg?color=%23ff3d3d" width="55" height="55"></div>
+            <div style="margin-bottom: 25px;"><img src="https://api.iconify.design/lucide:rocket.svg?color=%23ff3d3d" width="60" height="60"></div>
             <h2 class="section-title">Pronto para o <br><span class="highlight-red">próximo nível?</span></h2>
-            <p style="color: var(--text-gray); margin-bottom: 35px;">Junte-se a centenas de jogadores que escolheram a agência do Ninja.</p>
             <a href="https://api.whatsapp.com/send?phone=5545999370097" target="_blank" class="btn-primary">QUERO JOGAR COM O NINJA</a>
         </div>
     </section>
@@ -246,22 +235,3 @@
     <footer>
         <div class="container">
             <div style="max-width: 800px; margin: 0 auto 30px; line-height: 1.6; color: #555;">
-                O Poker é um esporte de habilidade mental. Jogue com responsabilidade. +18.
-            </div>
-            <div class="footer-links">
-                <a href="privacidade.html">Privacidade</a>
-                <a href="termos.html">Termos</a>
-                <a href="responsavel.html">Responsabilidade</a>
-            </div>
-            <div style="margin-top: 15px;">© 2026 Agente Ninja.</div>
-        </div>
-    </footer>
-
-    <!-- WHATSAPP -->
-    <a href="https://api.whatsapp.com/send?phone=5545999370097" target="_blank" class="wa-float">
-        <img src="https://api.iconify.design/logos:whatsapp-icon.svg" width="20" height="20">
-        Falar com Ninja
-    </a>
-
-</body>
-</html>
