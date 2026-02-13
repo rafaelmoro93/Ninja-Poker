@@ -70,11 +70,23 @@
         .section-padding { padding: 80px 0; }
         .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
         .card-v2 { background: var(--bg-card); padding: 35px; border-radius: 28px; border: 1px solid #1a1a1a; display: flex; flex-direction: column; gap: 15px; text-align: left; }
-        .card-header { display: flex; align-items: center; gap: 15px; }
-        .card-v2 h3 { font-size: 19px; font-weight: 800; }
+        
+        /* CORREÇÃO DO ALINHAMENTO DOS ÍCONES */
+        .card-header { 
+            display: flex; 
+            align-items: flex-start; /* Alinha no topo */
+            gap: 15px; 
+        }
+        .card-header img, .card-header span { 
+            margin-top: 3px; /* Ajuste fino para alinhar com a primeira linha do texto */
+            flex-shrink: 0; 
+        }
+        /* ---------------------------------- */
+
+        .card-v2 h3 { font-size: 19px; font-weight: 800; line-height: 1.3; }
         .card-v2 p { color: var(--text-gray); font-size: 14.5px; line-height: 1.6; }
 
-        /* --- COMPROMISSO (LADO A LADO NO DESKTOP) --- */
+        /* --- COMPROMISSO --- */
         .commitment-section { padding: 80px 0; background: #080808; }
         .commitment-flex { display: flex; align-items: center; justify-content: space-between; gap: 60px; }
         .commitment-content { flex: 1; text-align: left; }
@@ -129,17 +141,17 @@
     <!-- HERO -->
     <header class="hero">
         <div class="container">
-            <img src="logo.png" alt="Agente Ninja" class="logo-ninja">
+            <img src="logo.png" alt="Ninja Poker" class="logo-ninja">
             <div class="badge-oficial">
                 <img src="https://api.iconify.design/lucide:check-circle-2.svg?color=%2322c55e" width="18" height="18">
                 <span style="margin-left:6px">Agente Oficial Certificado</span>
                 <span class="separator-dot">•</span>
                 <span>Clube H10-1</span>
             </div>
-            <h1>Jogue no Suprema Poker <br> <span class="highlight-red">com quem entende do jogo.</span></h1>
-            <p class="subtext-hero">Entre para a agência do <strong>Agente Ninja</strong> e garanta suporte especializado para elevar sua experiência no esporte da mente.</p>
-            <a href="https://api.whatsapp.com/send?phone=5545999370097&text=Olá! Vim pelo site Ninja Poker." target="_blank" class="btn-primary">
-                Quero jogar na agência do Ninja <span>&rsaquo;</span>
+            <h1>Jogue no Suprema Poker <br> <span class="highlight-red">com o Ninja Poker.</span></h1>
+            <p class="subtext-hero">Entre para a agência do <strong>Ninja Poker</strong> e garanta suporte especializado para elevar sua experiência no esporte da mente.</p>
+            <a href="https://api.whatsapp.com/send?phone=5545999370097&text=Olá!%20Vim%20pelo%20site%20Ninja%20Poker%20e%20quero%20jogar." target="_blank" class="btn-primary">
+                Quero jogar agora <span>&rsaquo;</span>
             </a>
         </div>
     </header>
@@ -176,13 +188,13 @@
         </div>
     </section>
 
-    <!-- COMPROMISSO (LADO A LADO NO DESKTOP) -->
+    <!-- COMPROMISSO -->
     <section class="commitment-section">
         <div class="container">
             <div class="commitment-flex">
                 <div class="commitment-content">
                     <h2>Segurança e <br><span class="highlight-red">Estratégia.</span></h2>
-                    <p style="color: var(--text-gray); font-size: 18px; max-width: 550px;">Oferecemos suporte personalizado, consultoria e gestão técnica para quem busca evolução constante no Suprema Poker.</p>
+                    <p style="color: var(--text-gray); font-size: 18px; max-width: 550px;">Oferecemos suporte personalizado, consultoria e gestão técnica para quem busca evolução constante no Poker.</p>
                     
                     <div class="benefits-mini-grid">
                         <div class="benefit-item"><img src="https://api.iconify.design/lucide:shield-check.svg?color=%23ff3d3d" width="20" height="20">Segurança Total</div>
@@ -199,7 +211,7 @@
                         <div class="stat-row" style="border:none;"><span>Tempo de Transação</span><span class="stat-val" style="color: var(--blue);">&lt; 5min</span></div>
                         <div class="verified-badge">
                             <img src="https://api.iconify.design/lucide:shield-check.svg?color=white" width="18" height="18">
-                            Agente Verificado
+                            Agência Verificada
                         </div>
                     </div>
                 </div>
@@ -229,7 +241,7 @@
                     </div>
                 </div>
                 <div class="t-card">
-                    <p class="t-text">"Confiança é tudo no poker, e na agência do Ninja eu jogo tranquilo sabendo que o suporte é 24h."</p>
+                    <p class="t-text">"Confiança é tudo no poker, e com a Ninja Poker eu jogo tranquilo sabendo que o suporte é 24h."</p>
                     <div class="user-meta">
                         <div class="avatar">LP</div>
                         <div><strong>Lucas P.</strong><br><small style="color:#555">Há 1 ano no clube</small></div>
@@ -244,8 +256,8 @@
         <div class="container">
             <div style="margin-bottom: 30px;"><img src="https://api.iconify.design/lucide:rocket.svg?color=%23ff3d3d" width="60" height="60"></div>
             <h2 class="section-title">Pronto para o <br><span class="highlight-red">próximo nível?</span></h2>
-            <p style="color: var(--text-gray); font-size: 18px; margin-bottom: 40px;">Junte-se a centenas de jogadores que escolheram a agência do Ninja.</p>
-            <a href="https://api.whatsapp.com/send?phone=554599937&text=Olá! Vim pelo site Ninja Poker." target="_blank" class="btn-primary">QUERO JOGAR COM O NINJA</a>
+            <p style="color: var(--text-gray); font-size: 18px; margin-bottom: 40px;">Junte-se a centenas de jogadores que escolheram o Ninja Poker.</p>
+            <a href="https://api.whatsapp.com/send?phone=5545999370097&text=Olá!%20Vim%20pelo%20site%20Ninja%20Poker%20e%20quero%20me%20cadastrar." target="_blank" class="btn-primary">QUERO JOGAR AGORA</a>
         </div>
     </section>
 
@@ -255,7 +267,7 @@
             <div style="max-width: 850px; margin: 0 auto 30px; line-height: 1.8; color: #555;">
                 <strong>AVISO LEGAL:</strong> O Poker é reconhecido mundialmente como um esporte de habilidade mental. Promovemos o jogo consciente e responsável para fins de entretenimento. É estritamente proibida a participação de menores de 18 anos.
             </div>
-            <div class="footer-links">
+            <div class="footer-links" style="display: flex; justify-content: center;">
                 <a href="privacidade.html">Política de Privacidade</a>
                 <a href="termos.html">Termos de Uso</a>
                 <a href="responsavel.html">Jogo Responsável</a>
@@ -265,14 +277,10 @@
     </footer>
 
     <!-- WHATSAPP FLOAT -->
-    <a href="https://api.whatsapp.com/send?phone=554599937&text=Olá! Vim pelo site Ninja Poker." target="_blank" class="wa-float">
+    <a href="https://api.whatsapp.com/send?phone=5545999370097&text=Olá!%20Vim%20pelo%20site%20Ninja%20Poker%20e%20preciso%20de%20ajuda." target="_blank" class="wa-float">
         <img src="https://api.iconify.design/logos:whatsapp-icon.svg" width="22" height="22">
         Falar com Ninja
     </a>
 
 </body>
 </html>
-
-
-
-
