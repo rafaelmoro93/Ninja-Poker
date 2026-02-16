@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agente Ninja - Suprema Poker</title>
+    <title>Agente Ninja do Poker</title>
 
     <!-- META PIXEL INSTALADO (ID: 821577260961028) -->
     <script>
@@ -51,6 +51,7 @@
                               linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
             background-size: 50px 50px;
         }
+        .modal-active { overflow: hidden; }
 
         @media (max-width: 640px) {
             .mobile-pills-fix {
@@ -295,16 +296,16 @@
     <div class="max-w-4xl mx-auto text-center">
         
         <div class="mb-10 px-4">
-            <p class="text-zinc-500 text-xs md:text-sm leading-relaxed max-w-3xl mx-auto">
+            <p class="text-zinc-500 text-xs md:text-sm leading-relaxed max-w-3xl mx-auto text-left sm:text-center">
                 <span class="text-zinc-400 font-bold uppercase tracking-wider">Aviso Legal:</span> 
                 O Poker é reconhecido mundialmente como um esporte de habilidade mental. Promovemos o jogo consciente e responsável para fins de entretenimento. É estritamente proibida a participação de menores de 18 anos.
             </p>
         </div>
 
         <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 mb-10 text-zinc-400 text-sm font-medium">
-            <a href="privacidade.html" class="hover:text-white transition-colors duration-200">Política de Privacidade</a>
-            <a href="termos.html" class="hover:text-white transition-colors duration-200">Termos de Uso</a>
-            <a href="responsavel.html" class="hover:text-white transition-colors duration-200">Jogo Responsável</a>
+            <button onclick="openModal('privacidade')" class="hover:text-white transition-colors duration-200">Política de Privacidade</button>
+            <button onclick="openModal('termos')" class="hover:text-white transition-colors duration-200">Termos de Uso</button>
+            <button onclick="openModal('responsavel')" class="hover:text-white transition-colors duration-200">Jogo Responsável</button>
         </div>
 
         <div class="text-zinc-600 text-sm tracking-wide">
@@ -314,10 +315,74 @@
     </div>
 </footer>
 
-    <script>
+<!-- ESTRUTURA DO BALÃO (MODAL) -->
+<div id="legalModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/90 backdrop-blur-sm" onclick="closeModal()"></div>
+    <div class="relative bg-zinc-950 border border-zinc-800 w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-[2rem] p-8 md:p-12 shadow-2xl">
+        <button onclick="closeModal()" class="absolute top-6 right-6 text-zinc-500 hover:text-white transition-colors">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <div id="modalContent" class="text-zinc-300 space-y-6 leading-relaxed text-left">
+            <!-- Conteúdo injetado via JS -->
+        </div>
+    </div>
+</div>
+
+<script>
+    lucide.createIcons();
+
+    // CONTEÚDO ORIGINAL DAS PÁGINAS LEGAIS
+    const contents = {
+        privacidade: `
+            <h1 class="text-3xl font-bold text-white border-b-2 border-red-600 pb-2 mb-6">Política de Privacidade</h1>
+            <p>A sua privacidade é importante para nós. Esta política explica como o <strong>Ninja Poker</strong> trata seus dados em conformidade com a LGPD (Lei Geral de Proteção de Dados).</p>
+            <h2 class="text-xl font-bold text-white mt-8 mb-4">1. Coleta de Dados</h2>
+            <p>Não coletamos dados sensíveis automaticamente, exceto informações de navegação (cookies) para melhorar a performance do site e rastreamento de conversão de anúncios (Pixel).</p>
+            <h2 class="text-xl font-bold text-white mt-8 mb-4">2. Uso de Informações</h2>
+            <p>As informações coletadas via formulário ou contato direto de WhatsApp são utilizadas exclusivamente para o suporte técnico e intermediação de créditos no Suprema Poker.</p>
+            <h2 class="text-xl font-bold text-white mt-8 mb-4">3. Seus Direitos</h2>
+            <p>Você tem direito de solicitar a exclusão de seus dados de nossa base de contatos a qualquer momento via suporte oficial.</p>
+        `,
+        termos: `
+            <h1 class="text-3xl font-bold text-white border-b-2 border-red-600 pb-2 mb-6">Termos de Uso</h1>
+            <h2 class="text-xl font-bold text-white mt-8 mb-4">1. Natureza do Serviço</h2>
+            <p>O Ninja Poker atua como intermediário e suporte para jogadores nos aplicativos parceiros (Suprema Poker). Não somos o operador do software, mas sim prestadores de serviço de atendimento.</p>
+            <h2 class="text-xl font-bold text-white mt-8 mb-4">2. Idade Mínima</h2>
+            <p>Nossos serviços são estritamente destinados a pessoas maiores de 18 anos. Ao prosseguir, o usuário declara ter idade legal para a prática de jogos de habilidade.</p>
+            <h2 class="text-xl font-bold text-white mt-8 mb-4">3. Jogo de Habilidade</h2>
+            <p>O Poker é reconhecido mundialmente como um esporte de habilidade mental. Os resultados dependem da estratégia e conhecimento do usuário.</p>
+            <h2 class="text-xl font-bold text-white mt-8 mb-4">4. Limitação de Responsabilidade</h2>
+            <p>O usuário é responsável por suas próprias decisões e gestão de banca. Não garantimos resultados financeiros fixos.</p>
+        `,
+        responsavel: `
+            <h1 class="text-3xl font-bold text-white border-b-2 border-red-600 pb-2 mb-6">Jogo Responsável</h1>
+            <p>O Poker deve ser uma forma de entretenimento. O compromisso do <strong>Ninja Poker</strong> é com a diversão segura e consciente.</p>
+            <div class="bg-red-600/10 border-l-4 border-red-600 p-5 my-8 text-white">
+                <strong>Aviso:</strong> Nunca jogue dinheiro que seja destinado a compromissos essenciais (aluguel, comida, saúde).
+            </div>
+            <h2 class="text-xl font-bold text-white mt-8 mb-4">Diretrizes de Segurança:</h2>
+            <ul class="list-disc pl-5 space-y-3">
+                <li>Estabeleça limites de tempo e de valores antes de começar.</li>
+                <li>Não tente recuperar perdas de forma emocional.</li>
+                <li>O Poker é um esporte da mente; jogue quando estiver descansado e lúcido.</li>
+            </ul>
+            <h2 class="text-xl font-bold text-white mt-8 mb-4">Ajuda Profissional</h2>
+            <p>Se você sentir que o jogo está deixando de ser uma diversão, procure ajuda em organizações como <a href="https://www.begambleaware.org" target="_blank" class="text-red-500 hover:underline">BeGambleAware</a> ou grupos de apoio nacionais.</p>
+        `
+    };
+
+    function openModal(type) {
+        document.getElementById('modalContent').innerHTML = contents[type];
+        document.getElementById('legalModal').classList.remove('hidden');
+        document.body.classList.add('modal-active');
         lucide.createIcons();
-    </script>
+    }
+
+    function closeModal() {
+        document.getElementById('legalModal').classList.add('hidden');
+        document.body.classList.remove('modal-active');
+    }
+</script>
+
 </body>
 </html>
-
-
