@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jogo Responsável | Ninja Poker</title>
+<meta name="robots" content="noindex, follow" />
+<link rel="icon" type="image/png" href="../assets/favicon-32.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/style.css" />
+<style>
+  .legal-page { padding-top: calc(var(--header-h) + var(--space-5)); padding-bottom: var(--space-6); max-width: 780px; }
+  .legal-page h1 { margin-bottom: var(--space-2); }
+  .legal-page h2 { font-family: var(--font-display); text-transform: uppercase; font-weight: 400; font-size: 1.3rem; margin: var(--space-5) 0 var(--space-2); }
+  .legal-page p, .legal-page li { color: var(--gray-300); line-height: 1.8; margin-bottom: 1rem; }
+  .legal-page ul { padding-left: 1.2rem; list-style: disc; }
+  .back-link { display:inline-flex; align-items:center; gap:.5rem; margin-bottom: var(--space-3); color: var(--red-500); font-weight:600; }
+  .alert-box { border: 1px solid rgba(255,18,56,0.35); background: rgba(255,18,56,0.06); border-radius: var(--radius-md); padding: var(--space-3); margin: var(--space-3) 0; }
+</style>
+</head>
+<body>
+<header class="site-header is-scrolled">
+  <div class="container">
+    <a href="../index.html#inicio" class="brand">
+      <img src="../assets/logo-ninja-poker-trimmed.webp" alt="Ninja Poker" width="42" height="42" />
+      <span class="brand-wordmark">NINJA<span>POKER</span></span>
+    </a>
+    <nav class="nav-desktop">
+      <a class="btn btn-primary" href="../index.html#faq">Voltar ao site</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container legal-page">
+  <a class="back-link" href="../index.html">&larr; Voltar para a Ninja Poker</a>
+  <span class="eyebrow">Institucional</span>
+  <h1 class="display-lg">Jogo Responsável</h1>
+
+  <div class="alert-box">
+    <p style="margin:0;"><strong style="color:var(--white);">Jogue com responsabilidade.</strong> Poker envolve riscos financeiros. Nunca jogue além dos limites que você pode perder.</p>
+  </div>
+
+  <h2>Nosso compromisso</h2>
+  <p>A Ninja Poker é destinada exclusivamente a maiores de 18 anos e incentiva uma relação saudável e consciente com o jogo. Poker é uma atividade que envolve estratégia, mas também risco financeiro real — resultados nunca são garantidos.</p>
+
+  <h2>Sinais de alerta</h2>
+  <ul>
+    <li>Jogar com dinheiro destinado a despesas essenciais.</li>
+    <li>Tentar recuperar perdas jogando por mais tempo do que o planejado.</li>
+    <li>Sentir ansiedade, irritação ou perda de controle relacionada ao jogo.</li>
+    <li>Esconder hábitos de jogo de familiares ou pessoas próximas.</li>
+  </ul>
+
+  <h2>Boas práticas</h2>
+  <ul>
+    <li>Defina um limite de banca antes de começar a jogar.</li>
+    <li>Trate o poker como entretenimento, não como fonte de renda garantida.</li>
+    <li>Faça pausas regulares durante as sessões.</li>
+    <li>Nunca jogue sob efeito de álcool ou em momentos de forte abalo emocional.</li>
+  </ul>
+
+  <h2>Onde buscar ajuda</h2>
+  <p>Caso identifique sinais de que o jogo está deixando de ser uma atividade recreativa, procure orientação profissional especializada em jogo responsável na sua região.</p>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-bottom">
+    <span class="footer-meta"><span class="age-badge">18+</span> © <span id="footer-year"></span> Ninja Poker.</span>
+  </div>
+</footer>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
