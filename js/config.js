@@ -24,14 +24,14 @@ window.NINJA_CONFIG = {
 
   // Mensagens pré-preenchidas por contexto de clique (aparecem já digitadas no WhatsApp)
   WHATSAPP_MENSAGENS: {
-    default: "Olá! Quero saber como faço para entrar na Ninja Poker.",
-    hero: "Olá! Vi o site da Ninja Poker e quero entrar para a agência.",
-    header: "Olá! Quero falar com a equipe da Ninja Poker.",
-    ctaIntermediario: "Olá! Quero entrar para a Ninja Poker agora.",
-    ctaFinal: "Olá! Quero fazer parte da Ninja Poker.",
-    faq: "Olá! Tenho uma dúvida sobre a Ninja Poker.",
-    mobileBar: "Olá! Quero entrar para a Ninja Poker.",
-    whatsappFlutuante: "Olá! Quero falar com a Ninja.",
+    default: "Olá! Quero saber como faço para entrar no Ninja Poker.",
+    hero: "Olá! Vi o site do Ninja Poker e quero entrar para a agência.",
+    header: "Olá! Quero falar com a equipe do Ninja Poker.",
+    ctaIntermediario: "Olá! Quero entrar para o Ninja Poker agora.",
+    ctaFinal: "Olá! Quero fazer parte do Ninja Poker.",
+    faq: "Olá! Tenho uma dúvida sobre o Ninja Poker.",
+    mobileBar: "Olá! Quero entrar para o Ninja Poker.",
+    whatsappFlutuante: "Olá! Quero falar com o Ninja.",
   },
 
   // Seção de números — conteúdo configurável. Não são inventados: são placeholders
